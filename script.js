@@ -2,7 +2,7 @@ function threeSum(arr, target) {
 // write your code here
 	var add=0;
   var ag=0;
-  var ct=20000000000000000;  
+  var ct=20000000000000;  
   
   for(var i=0;i<arr.length;i++){
            
