@@ -1,14 +1,38 @@
 function threeSum(arr, target) {
 // write your code here
-	var a=0;
-	var b=0;
-	for(let i=0;i<arr.length;i++){
-		a=a+[i];
-		if(target==a-1||target==a+1){
-			b=a;
-		}
-	}
-  return b;
+	var add=0;
+  var ag=0;
+  var ct=200000;  
+  
+  for(var i=0;i<arr.length;i++){
+           
+        var sub =arr.slice(i,i+3);
+         add=0;
+         console.log(sub);
+         if(sub.length==3){
+             for(j=0;j<sub.length;j++){
+                    add=add+sub[j];
+             }
+                 console.log(add);
+      
+                    if(target>add){
+                        ag=target-add;
+                    }
+                //   console.log("this is ag> "+ag);
+                    if(target<add){
+                        ag=add-target;
+                    }
+                      console.log("ag<: "+ag)
+             }
+             if(ag<ct)
+             {
+                 ct=ag;
+                 var origin=add;
+             }
+              }
+	return origin
+    
+
 }
 
 module.exports = threeSum;
